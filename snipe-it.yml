@@ -1,14 +1,14 @@
 version: '3.7'
 services:
     snipeit:
-        build: ./snipe-it
+        build: ./snipe-it-6.1.0
         container_name: snipeit
         env_file:
             - .env
         volumes:
             - snipe-vol:/var/lib/snipeit
-            - ./cert/fullchain.pem:/var/lib/snipeit/ssl/snipeit-ssl.crt
-            - ./cert/privkey.pem:/var/lib/snipeit/ssl/snipeit-ssl.key
+          # - ./cert/fullchain.pem:/var/lib/snipeit/ssl/snipeit-ssl.crt
+          #  - ./cert/privkey.pem:/var/lib/snipeit/ssl/snipeit-ssl.key
         restart: always
         ports:
             - 80:80
