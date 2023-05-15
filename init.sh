@@ -49,6 +49,8 @@ echo "CONFIGURE CERTIFICATE"
 echo "install letsencrypt" 
 sudo apt install certbot python3-certbot-nginx -y
 
+# stop nginx to free up port 80
+sudo systemctl stop nginx
 
 echo "CREATE CERTIFICATE"
 sudo certbot certonly --standalone -n --agree-tos --email <domain email> -d <domain name>
