@@ -7,8 +7,8 @@ services:
             - .env
         volumes:
             - snipe-vol:/var/lib/snipeit
-          # - ./cert/fullchain.pem:/var/lib/snipeit/ssl/snipeit-ssl.crt
-          #  - ./cert/privkey.pem:/var/lib/snipeit/ssl/snipeit-ssl.key
+            - ./cert/fullchain.pem:/var/lib/snipeit/ssl/snipeit-ssl.crt
+            - ./cert/privkey.pem:/var/lib/snipeit/ssl/snipeit-ssl.key
         restart: always
         ports:
             - 80:80
