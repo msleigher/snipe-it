@@ -49,7 +49,7 @@ echo "CONFIGURE CERTIFICATE"
 echo "install letsencrypt" 
 sudo apt install certbot python3-certbot-nginx -y
 
-# stop nginx to free up port 80
+# stop nginx to free up port 80, (also you can run dig +short mymontery.com, in order to see the ip addresses associated with the domain name, should be only 1 ip address). 
 sudo systemctl stop nginx
 
 echo "CREATE CERTIFICATE"
