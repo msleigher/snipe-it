@@ -72,12 +72,12 @@ git config --global credential.helper store
 
 echo "CLONE REPO AND CHECK OUT BRANCH"
 
-git clone https://github.com/msleigher/snipe-it.git 
+git clone https://github.com/msleigher/snipe-it-dev.git 
 
-cd snipe-it
+cd snipe-it-dev
 
 echo "Create linked certificate"
-mkdir cert
+# mkdir cert
 
 sudo cp /etc/letsencrypt/archive/<domain.com>/fullchain1.pem cert/fullchain.pem
 sudo cp /etc/letsencrypt/archive/<domain.com>/privkey1.pem cert/privkey.pem
